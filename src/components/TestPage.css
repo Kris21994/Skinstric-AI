@@ -1,0 +1,81 @@
+
+
+.back-btn {
+  position: absolute;
+  border: none;
+  background: transparent !important;
+  cursor: pointer;
+  top: 550px;
+  left: 32px;
+}
+
+.page-title {
+  position: absolute;
+  top: 82px;
+  left: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #1a1b1c;
+}
+
+.diamond-wrapper {
+  width: 33%;
+  height: 40%;
+  position: absolute;
+  top: 248px;
+  left: 450px;
+}
+
+.diamond-content {  
+  position: relative; 
+  text-align: center;
+  width: 100%;
+}
+
+.intro-label {
+  font-size: 12px;
+  color: #737373;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.intro-input {
+  font-size: 40px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1px solid #1a1b1c;
+  background: none;
+  text-align: center;
+  width: 100%;
+  outline: none;
+}
+
+.rumbuses {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 632px;
+  height: 632px;
+  z-index: -1;
+}
+
+.proceed-btn {
+  position: absolute;
+  top: 280px;
+  left: 820px;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  z-index: 10;
+  cursor: pointer;  
+}
+
+.loading-message,
+.done-message {
+  margin-top: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+

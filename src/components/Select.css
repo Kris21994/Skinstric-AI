@@ -1,0 +1,126 @@
+.select-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.select-loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.select-loading-icon {
+  width: 1600px;
+  height: auto;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 8px 32px;
+
+}
+.subtitle {
+  font-size: 18px;
+  margin: 4px 32px;
+}
+.instruction {
+  font-size: 14px;
+  margin: 24px 32px;
+}
+
+.diamond-grid {
+  position: relative;
+  width: 300px; 
+  height: 300px;
+  margin: 40px auto;
+}
+
+.diamond {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.diamond-frame {
+  position: absolute;
+  top: -220px;
+  left: -240px;
+  z-index: 0;
+}
+
+.diamond-frame img {
+  width: 750px;
+  height: 750px;
+  object-fit: contain;
+}
+
+.diamond span {
+  transform: none;
+}
+
+.diamond.top {
+  top: 0;
+  left: 120px;
+}
+.diamond.left {
+  top: 120px;
+  left: 0;
+}
+.diamond.right {
+  top: 120px;
+  left: 240px;
+}
+.diamond.bottom {
+  top: 240px;
+  left: 120px;
+}
+
+.diamond.disabled {
+  border-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.back-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}

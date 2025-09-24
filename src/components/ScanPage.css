@@ -1,0 +1,149 @@
+.loading-screen {
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+.camera-icon {
+  position: absolute;
+  top: -100px;
+  left: -125px;
+  width: 1600px;
+  height: 1600px;
+  background-image: url("../images/camera-shutter.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.loading-text {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.loading-hints p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.loading-hints ul {
+  list-style: none;
+  padding: 0;
+}
+
+.loading-hints li {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.scan-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  z-index: 9999; /* Helps push above any default layout */
+}
+
+.camera-feed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 10;
+}
+
+.guidance-line {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.capture-icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.capture-icon-btn img {
+  width: 64px;
+  height: 64px;
+}
+
+.take-photo-btn {
+  position: absolute;
+  bottom: 300px;
+  right: 5%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.take-photo-btn img {
+  width: 180px; 
+  height: auto;
+}
+
+.scan-proceed-btn {
+  position: absolute;
+  top: -35px;
+  left: 1200px;
+  border: none;
+  background: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.captured-frame {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.great-shot {
+    position: absolute;
+    top: -500px;
+    left: 600px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.scan-back-btn {
+  position: absolute;
+  top: 560px;
+  left: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20;
+}
