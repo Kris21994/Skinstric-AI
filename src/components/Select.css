@@ -47,16 +47,36 @@
 }
 
 .diamond-grid {
-  position: relative;
-  width: 300px; 
-  height: 300px;
-  margin: 40px auto;
+ position: fixed;
+  top: 50%;   
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  max-width: 350px; 
+  height: 50vw;
+  max-height: 350px; 
+}
+
+.diamond-frame {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-56%, -43%);
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+}
+
+.diamond-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .diamond {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 8%;
+  height: auto;
   color: white;
   font-weight: bold;
   display: flex;
@@ -67,39 +87,31 @@
   z-index: 1;
 }
 
-.diamond-frame {
-  position: absolute;
-  top: -220px;
-  left: -240px;
-  z-index: 0;
-}
-
-.diamond-frame img {
-  width: 750px;
-  height: 750px;
-  object-fit: contain;
-}
-
 .diamond span {
   transform: none;
 }
 
 .diamond.top {
-  top: 0;
+  top: 0px;
   left: 120px;
 }
+
 .diamond.left {
   top: 120px;
-  left: 0;
+  left: 0px;
 }
+
 .diamond.right {
   top: 120px;
   left: 240px;
 }
+
 .diamond.bottom {
   top: 240px;
   left: 120px;
 }
+
+
 
 .diamond.disabled {
   border-color: #ccc;

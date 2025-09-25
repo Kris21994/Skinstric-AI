@@ -1,45 +1,49 @@
-
-
-.back-btn {
-  position: absolute;
-  border: none;
-  background: transparent !important;
-  cursor: pointer;
-  top: 550px;
-  left: 32px;
+.test-page {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 228px;
 }
 
+/* Header */
+.page-header {
+  padding: 32px;
+}
 .page-title {
-  position: absolute;
-  top: 82px;
-  left: 32px;
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
   color: #1a1b1c;
+  margin: 0;
 }
 
+/* Main Content */
+.page-main {
+  flex: 1; /* take all available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .diamond-wrapper {
   width: 33%;
-  height: 40%;
-  position: absolute;
-  top: 248px;
-  left: 450px;
+  max-width: 600px;
 }
-
-.diamond-content {  
-  position: relative; 
-  text-align: center;
+.diamond-content {
+  position: relative;
   width: 100%;
+  text-align: center;
 }
-
 .intro-label {
   font-size: 12px;
   color: #737373;
   text-transform: uppercase;
   margin-bottom: 8px;
+  display: block;
 }
-
 .intro-input {
   font-size: 40px;
   font-weight: 500;
@@ -49,33 +53,48 @@
   text-align: center;
   width: 100%;
   outline: none;
+  z-index: 1;
 }
-
 .rumbuses {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 632px;
-  height: 632px;
-  z-index: -1;
+  width: 732px;
+  height: 732px;
+  pointer-events: none;
 }
-
-.proceed-btn {
-  position: absolute;
-  top: 280px;
-  left: 820px;
-  transform: translateX(-50%);
-  background: none;
-  border: none;
-  z-index: 10;
-  cursor: pointer;  
-}
-
 .loading-message,
 .done-message {
   margin-top: 24px;
   font-size: 16px;
   text-align: center;
 }
+
+.test-back-btn,
+.test-proceed-btn {
+  position: fixed;       /* stick to viewport */
+  bottom: 32px;          /* same for both, aligns vertically */
+  border: none;
+  background: none;      /* transparent */
+  cursor: pointer;
+  z-index: 50;
+}
+
+.test-back-btn {
+  left: 32px;            /* bottom-left corner */
+}
+
+.test-proceed-btn {
+  right: 32px;           /* bottom-right corner */
+}
+
+.test-back-btn img,
+.test-proceed-btn img {
+  width: 120px;          /* adjust size of buttons */
+  height: auto;
+  display: block;
+}
+
+
 

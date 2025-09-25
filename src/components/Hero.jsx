@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
+import "./Hero.css";
 import IconLeft from "../images/button-icon-text-shrunk (1).svg";
 import IconRight from "../images/button-icon-text-shrunk.svg";
 import IconLeft1 from "../images/Rectangle left1.svg";
 import IconRight1 from "../images/Rectangle right1.svg";
 
 const Hero = () => {
-  const [hoverSide, setHoverSide] = useState(null); // 'left' or 'right'
+  const [hoverSide, setHoverSide] = useState(null);
   const navigate = useNavigate();
 
   return (
@@ -44,31 +44,30 @@ const Hero = () => {
           onMouseEnter={() => setHoverSide("right")}
           onMouseLeave={() => setHoverSide(null)}
           onClick={() => navigate("/test")}
-
         >
           <img src={IconLeft} alt="Take a Photo" />
         </button>
       )}
 
-      {/* Title */}
-      <h1
-        className={`hero__title ${
-          hoverSide === "left"
-            ? "slide-right"
-            : hoverSide === "right"
-            ? "slide-left"
-            : ""
-        }`}
-      >
-        <span className="hero__title--sophisticated">Sophisticated</span>
-        <span className="hero__title--skincare">Skincare</span>
-      </h1>
-
-      {/* Footnote */}
-      <p className="hero__footnote">
-        Skinstric developed an A.I. that creates a highly-personalised routine
-        tailored to what your skin needs.
-      </p>
+      {/* Centered Content */}
+      <div className="hero__center">
+        <h1
+          className={`hero__title ${
+            hoverSide === "left"
+              ? "slide-right"
+              : hoverSide === "right"
+              ? "slide-left"
+              : ""
+          }`}
+        >
+          <span className="hero__title--sophisticated">Sophisticated</span>
+          <span className="hero__title--skincare">Skincare</span>
+        </h1>
+        <p className="hero__footnote">
+          Skinstric developed an A.I. that creates a highly-personalised routine
+          tailored to what your skin needs.
+        </p>
+      </div>
     </section>
   );
 };

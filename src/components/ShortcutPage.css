@@ -6,7 +6,7 @@
 }
 
 .shortcut-title {
-position: absolute;
+  position: absolute;
   top: 18px;
   left: 32px;
   font-weight: 700;
@@ -68,7 +68,7 @@ position: absolute;
 .camera-modal-content {
   width: 352px;
   height: 136px;
-  background-color: #1A1B1C;
+  background-color: #1a1b1c;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,11 +91,11 @@ position: absolute;
 }
 
 .camera-modal-buttons {
-    position: relative;
-    top: 20px;
-    left: 80px;
-    display: flex;
-    gap: 14px;
+  position: relative;
+  top: 20px;
+  left: 80px;
+  display: flex;
+  gap: 14px;
 }
 
 .camera-modal-buttons button {
@@ -112,14 +112,15 @@ position: absolute;
 
 .camera-modal-buttons button:hover {
   background-color: white;
-  color: #1A1B1C;
+  color: #1a1b1c;
 }
 
 .back-btn {
-  position: absolute;
-  border: none;
-  background: none;
+  width: 120px;
+  display: block;
+  position: fixed;
+  bottom: 32px;
+  background: none !important;
   cursor: pointer;
-  top: 480px;
-  left: 32px;
+  z-index: 50;
 }

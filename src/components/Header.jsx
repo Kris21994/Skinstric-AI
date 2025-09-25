@@ -1,6 +1,7 @@
 import React from "react";
 import ParenLeft from "../images/Rectangle left.svg";
 import ParenRight from "../images/Rectangle right.svg";
+import "./Header.css";
 
 const Header = () => (
   <nav className="navbar">

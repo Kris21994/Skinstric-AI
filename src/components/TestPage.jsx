@@ -40,12 +40,15 @@ const TestPage = () => {
       const result = await response.json();
       console.log("API Response:", result);
 
-      // Store locally
       localStorage.setItem("userName", name);
       localStorage.setItem("userLocation", location);
     } catch (error) {
       console.error("API Error:", error);
     }
+  };
+
+  const handleBack = () => {
+    navigate(-1); 
   };
 
   const triggerProcessing = () => {
@@ -62,53 +65,60 @@ const TestPage = () => {
 
   return (
     <div className="test-page">
-      <button className="back-btn" onClick={() => navigate("/")}>
-        <img src={BackButton} alt="Back" />
-      </button>
+      {/* Header */}
+      <header className="page-header">
+        <h2 className="page-title">To start analysis</h2>
+      </header>
 
-      <h2 className="page-title">To start analysis</h2>
+      {/* Main Content */}
+      <main className="page-main">
+        <div className="diamond-wrapper">
+          <div className="diamond-content">
+            {step < 3 && (
+              <>
+                <label className="intro-label">
+                  {step === 1 || step === 2 ? "Click to type" : ""}
+                </label>
+                <input
+                  type="text"
+                  className="intro-input"
+                  placeholder={
+                    step === 1 ? "Introduce yourself" : "Where are you from?"
+                  }
+                  value={step === 1 ? name : location}
+                  onChange={(e) =>
+                    step === 1
+                      ? setName(e.target.value)
+                      : setLocation(e.target.value)
+                  }
+                  onKeyDown={handleKeyDown}
+                />
+                <img src={Rumbuses} alt="" className="rumbuses" />
+              </>
+            )}
 
-      <div className="diamond-wrapper">
-        <div className="diamond-content">
-          {step < 3 && (
-            <>
-              <label className="intro-label">
-                {step === 1 || step === 2 ? "Click to type" : ""}
-              </label>
-              <input
-                type="text"
-                className="intro-input"
-                placeholder={
-                  step === 1 ? "Introduce yourself" : "Where are you from?"
-                }
-                value={step === 1 ? name : location}
-                onChange={(e) =>
-                  step === 1
-                    ? setName(e.target.value)
-                    : setLocation(e.target.value)
-                }
-                onKeyDown={handleKeyDown}
-              />
-              <img src={Rumbuses} alt="" className="rumbuses" />
-            </>
-          )}
+            {isProcessing && (
+              <div className="loading-message">Analyzing... Please wait</div>
+            )}
 
-          {isProcessing && (
-            <div className="loading-message">Analyzing... Please wait</div>
-          )}
-
-          {isDone && (
-            <>
+            {isDone && (
               <div className="done-message">
                 Processing done. Please proceed forward.
               </div>
-              <button className="proceed-btn" onClick={handleProceed}>
-                <img src={Proceed} alt="Proceed" />
-              </button>
-            </>
-          )}
+            )}
+          </div>
         </div>
-      </div>
+      </main>
+
+        <button className="test-back-btn" onClick={handleBack}>
+          <img src={BackButton} alt="Back" />
+        </button>
+
+        {isDone && (
+          <button className="test-proceed-btn" onClick={handleProceed}>
+            <img src={Proceed} alt="Proceed" />
+          </button>
+        )}
     </div>
   );
 };
