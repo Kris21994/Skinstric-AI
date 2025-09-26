@@ -64,8 +64,9 @@ body {
 
 /* Optional: fade out elements */
 .corner-frame {
-  position: absolute;
-  top: 14px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .corner-frame--left {
@@ -91,12 +92,14 @@ body {
 }
 
 .hero-btn--left {
+  position: fixed;
   top: 50%;
   left: 32px;
   transform: translateY(-50%);
 }
 
 .hero-btn--right {
+  position: fixed;
   top: 50%;
   right: 32px;
   transform: translateY(-50%);

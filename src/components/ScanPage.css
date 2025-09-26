@@ -100,12 +100,12 @@
 }
 
 .take-photo-btn img {
-  width: 180px; 
+  width: 180px;
   height: auto;
 }
 
 .scan-proceed-btn {
-   width: 120px;
+  width: 120px;
   display: block;
   position: fixed;
   bottom: 32px;
@@ -128,9 +128,10 @@
 }
 
 .great-shot {
-    position: absolute;
-    top: -500px;
-    left: 600px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 18px;
   font-weight: bold;
