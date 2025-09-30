@@ -115,6 +115,29 @@
   color: #1a1b1c;
 }
 
+.image-preview {
+  position: absolute; /* or use flex/grid depending on layout */
+  right: 20px;
+  top: 100px;
+  max-width: 200px;
+}
+
+.image-preview img {
+  width: 100%;
+}
+
+.shortcut-proceed {
+  width: 120px;
+  display: block;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: none;
+  border: none !important;
+  cursor: pointer;
+  z-index: 50;
+}
+
 .back-btn {
   width: 120px;
   display: block;
